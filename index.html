@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Kitchen Pal — Learn to cook, for real this time</title>
+  <meta name="description" content="A cooking app that actually teaches you to cook. Step-by-step, with timers, tips, and a mouse named Miso.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero">
+    <div class="hero-food-grid" aria-hidden="true">
+      <div class="food-col food-col-1">
+        <img src="assets/recipes/pad-thai.jpg" alt="" loading="eager">
+        <img src="assets/recipes/shakshuka.jpg" alt="" loading="eager">
+        <img src="assets/recipes/dumplings.jpg" alt="" loading="eager">
+        <img src="assets/recipes/carbonara.jpg" alt="" loading="eager">
+        <img src="assets/recipes/pad-thai.jpg" alt="" loading="eager">
+        <img src="assets/recipes/shakshuka.jpg" alt="" loading="eager">
+      </div>
+      <div class="food-col food-col-2">
+        <img src="assets/recipes/butter-chicken.jpg" alt="" loading="eager">
+        <img src="assets/recipes/bibimbap.jpg" alt="" loading="eager">
+        <img src="assets/recipes/smash-burgers.jpg" alt="" loading="eager">
+        <img src="assets/recipes/thai-green-curry.jpg" alt="" loading="eager">
+        <img src="assets/recipes/butter-chicken.jpg" alt="" loading="eager">
+        <img src="assets/recipes/bibimbap.jpg" alt="" loading="eager">
+      </div>
+      <div class="food-col food-col-3">
+        <img src="assets/recipes/homemade-ramen.jpg" alt="" loading="eager">
+        <img src="assets/recipes/birria-tacos.jpg" alt="" loading="eager">
+        <img src="assets/recipes/pan-seared-salmon.jpg" alt="" loading="eager">
+        <img src="assets/recipes/aglio-e-olio.jpg" alt="" loading="eager">
+        <img src="assets/recipes/homemade-ramen.jpg" alt="" loading="eager">
+        <img src="assets/recipes/birria-tacos.jpg" alt="" loading="eager">
+      </div>
+      <div class="food-col food-col-4">
+        <img src="assets/recipes/chicken-fried-rice.jpg" alt="" loading="eager">
+        <img src="assets/recipes/fish-tacos.jpg" alt="" loading="eager">
+        <img src="assets/recipes/beef-bourguignon.jpg" alt="" loading="eager">
+        <img src="assets/recipes/korean-fried-chicken.jpg" alt="" loading="eager">
+        <img src="assets/recipes/chicken-fried-rice.jpg" alt="" loading="eager">
+        <img src="assets/recipes/fish-tacos.jpg" alt="" loading="eager">
+      </div>
+      <div class="food-col food-col-5">
+        <img src="assets/recipes/kung-pao-chicken.jpg" alt="" loading="eager">
+        <img src="assets/recipes/chimichurri-steak.jpg" alt="" loading="eager">
+        <img src="assets/recipes/thai-basil-chicken.jpg" alt="" loading="eager">
+        <img src="assets/recipes/chana-masala.jpg" alt="" loading="eager">
+        <img src="assets/recipes/kung-pao-chicken.jpg" alt="" loading="eager">
+        <img src="assets/recipes/chimichurri-steak.jpg" alt="" loading="eager">
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="assets/mascot/miso-cooking.png" alt="Miso the mouse" class="hero-miso">
+      <h1>You keep saying<br>you'll learn to cook.</h1>
+      <div class="hero-divider"></div>
+      <p class="hero-sub">Miso will get you there.</p>
+      <p class="hero-desc">Meet your AI sous chef — a mouse who learned to cook from his grandma. He walks you through 50 real recipes step by step, answers your questions mid-cook, and won't let you burn anything.</p>
+      <a href="#" class="cta-button">Download for iOS</a>
+    </div>
+  </section>
+
+  <!-- ====== HOW IT WORKS ====== -->
+  <section class="how-it-works">
+    <div class="section-inner">
+      <h2>Here's what actually happens</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Pick something to cook</h3>
+            <p>50+ recipes organized by skill, not by how pretty they look on Instagram. Start with aglio e olio. Work up to dumplings from scratch.</p>
+          </div>
+          <img src="assets/recipes/aglio-e-olio.jpg" alt="Aglio e Olio" class="step-photo" loading="lazy">
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>We walk you through it</h3>
+            <p>Every step has a timer, a clear instruction, and a tip from someone who's burned this before. When two things need to happen at once, we split the screen so you don't forget the pasta water.</p>
+          </div>
+          <img src="assets/recipes/carbonara.jpg" alt="Carbonara in progress" class="step-photo" loading="lazy">
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Ask when you're lost</h3>
+            <p>"How do I know when the oil is hot enough?" Just ask. Miso answers with actual cooking knowledge, not a recipe blog life story.</p>
+          </div>
+          <img src="assets/mascot/miso-thinking.png" alt="Miso thinking" class="step-photo step-photo-miso" loading="lazy">
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>You made food</h3>
+            <p>Take a photo. Get your XP. Do it again next week. Or tomorrow, if it was that good.</p>
+          </div>
+          <img src="assets/recipes/bibimbap.jpg" alt="Finished bibimbap" class="step-photo" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== RECIPE SHOWCASE ====== -->
+  <section class="recipes">
+    <div class="section-inner">
+      <h2>The menu</h2>
+      <p class="section-desc">50 recipes across five skill paths. These are things you'll actually want to eat.</p>
+    </div>
+    <div class="recipe-marquee-wrap">
+      <div class="recipe-marquee recipe-marquee-1">
+        <div class="recipe-card"><img src="assets/recipes/aglio-e-olio.jpg" alt="Aglio e Olio" loading="lazy"><span>Aglio e Olio</span></div>
+        <div class="recipe-card"><img src="assets/recipes/pad-thai.jpg" alt="Pad Thai" loading="lazy"><span>Pad Thai</span></div>
+        <div class="recipe-card"><img src="assets/recipes/shakshuka.jpg" alt="Shakshuka" loading="lazy"><span>Shakshuka</span></div>
+        <div class="recipe-card"><img src="assets/recipes/birria-tacos.jpg" alt="Birria Tacos" loading="lazy"><span>Birria Tacos</span></div>
+        <div class="recipe-card"><img src="assets/recipes/butter-chicken.jpg" alt="Butter Chicken" loading="lazy"><span>Butter Chicken</span></div>
+        <div class="recipe-card"><img src="assets/recipes/carbonara.jpg" alt="Carbonara" loading="lazy"><span>Carbonara</span></div>
+        <div class="recipe-card"><img src="assets/recipes/dumplings.jpg" alt="Dumplings" loading="lazy"><span>Dumplings</span></div>
+        <div class="recipe-card"><img src="assets/recipes/bibimbap.jpg" alt="Bibimbap" loading="lazy"><span>Bibimbap</span></div>
+        <!-- duplicate -->
+        <div class="recipe-card"><img src="assets/recipes/aglio-e-olio.jpg" alt="" loading="lazy"><span>Aglio e Olio</span></div>
+        <div class="recipe-card"><img src="assets/recipes/pad-thai.jpg" alt="" loading="lazy"><span>Pad Thai</span></div>
+        <div class="recipe-card"><img src="assets/recipes/shakshuka.jpg" alt="" loading="lazy"><span>Shakshuka</span></div>
+        <div class="recipe-card"><img src="assets/recipes/birria-tacos.jpg" alt="" loading="lazy"><span>Birria Tacos</span></div>
+        <div class="recipe-card"><img src="assets/recipes/butter-chicken.jpg" alt="" loading="lazy"><span>Butter Chicken</span></div>
+        <div class="recipe-card"><img src="assets/recipes/carbonara.jpg" alt="" loading="lazy"><span>Carbonara</span></div>
+        <div class="recipe-card"><img src="assets/recipes/dumplings.jpg" alt="" loading="lazy"><span>Dumplings</span></div>
+        <div class="recipe-card"><img src="assets/recipes/bibimbap.jpg" alt="" loading="lazy"><span>Bibimbap</span></div>
+      </div>
+    </div>
+    <div class="recipe-marquee-wrap">
+      <div class="recipe-marquee recipe-marquee-2">
+        <div class="recipe-card"><img src="assets/recipes/pan-seared-salmon.jpg" alt="Pan-Seared Salmon" loading="lazy"><span>Pan-Seared Salmon</span></div>
+        <div class="recipe-card"><img src="assets/recipes/thai-green-curry.jpg" alt="Thai Green Curry" loading="lazy"><span>Thai Green Curry</span></div>
+        <div class="recipe-card"><img src="assets/recipes/smash-burgers.jpg" alt="Smash Burgers" loading="lazy"><span>Smash Burgers</span></div>
+        <div class="recipe-card"><img src="assets/recipes/homemade-ramen.jpg" alt="Homemade Ramen" loading="lazy"><span>Homemade Ramen</span></div>
+        <div class="recipe-card"><img src="assets/recipes/korean-fried-chicken.jpg" alt="Korean Fried Chicken" loading="lazy"><span>Korean Fried Chicken</span></div>
+        <div class="recipe-card"><img src="assets/recipes/fish-tacos.jpg" alt="Fish Tacos" loading="lazy"><span>Fish Tacos</span></div>
+        <div class="recipe-card"><img src="assets/recipes/chimichurri-steak.jpg" alt="Chimichurri Steak" loading="lazy"><span>Chimichurri Steak</span></div>
+        <div class="recipe-card"><img src="assets/recipes/chana-masala.jpg" alt="Chana Masala" loading="lazy"><span>Chana Masala</span></div>
+        <!-- duplicate -->
+        <div class="recipe-card"><img src="assets/recipes/pan-seared-salmon.jpg" alt="" loading="lazy"><span>Pan-Seared Salmon</span></div>
+        <div class="recipe-card"><img src="assets/recipes/thai-green-curry.jpg" alt="" loading="lazy"><span>Thai Green Curry</span></div>
+        <div class="recipe-card"><img src="assets/recipes/smash-burgers.jpg" alt="" loading="lazy"><span>Smash Burgers</span></div>
+        <div class="recipe-card"><img src="assets/recipes/homemade-ramen.jpg" alt="" loading="lazy"><span>Homemade Ramen</span></div>
+        <div class="recipe-card"><img src="assets/recipes/korean-fried-chicken.jpg" alt="" loading="lazy"><span>Korean Fried Chicken</span></div>
+        <div class="recipe-card"><img src="assets/recipes/fish-tacos.jpg" alt="" loading="lazy"><span>Fish Tacos</span></div>
+        <div class="recipe-card"><img src="assets/recipes/chimichurri-steak.jpg" alt="" loading="lazy"><span>Chimichurri Steak</span></div>
+        <div class="recipe-card"><img src="assets/recipes/chana-masala.jpg" alt="" loading="lazy"><span>Chana Masala</span></div>
+      </div>
+    </div>
+    <p class="recipe-count">+ 34 more across Pasta Night, Sear &amp; Sizzle, Wok Skills, Spice &amp; Simmer, and Global Favorites.</p>
+  </section>
+
+  <!-- ====== MEET MISO — Big intro moment ====== -->
+  <section class="miso-intro">
+    <div class="section-inner">
+      <div class="miso-intro-center">
+        <img src="assets/mascot/miso-default.png" alt="Miso the mouse" class="miso-intro-img">
+        <div class="miso-speech-bubble">
+          <p>Hey, I'm Miso. I learned to cook from my grandma and I've been waiting to teach you. Ask me anything — I actually know what I'm talking about.</p>
+        </div>
+        <h2>Meet your sous chef.</h2>
+        <p class="miso-intro-desc">Miso is an AI cooking companion powered by Claude. He's not a chatbot reading you a recipe blog. He understands what you're making, what step you're on, and what you actually need to know right now.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MISO FEATURES ====== -->
+  <section class="miso-section">
+    <div class="section-inner">
+      <div class="miso-features">
+        <div class="miso-feature">
+          <div class="miso-feature-img">
+            <img src="assets/mascot/miso-thinking.png" alt="Miso thinking">
+          </div>
+          <strong>Snap your fridge</strong>
+          <p>Take a photo of what you have. Miso identifies ingredients and tells you what you can make tonight — no grocery run required.</p>
+        </div>
+        <div class="miso-feature">
+          <div class="miso-feature-img">
+            <img src="assets/mascot/miso-cooking.png" alt="Miso cooking">
+          </div>
+          <strong>Ask mid-cook</strong>
+          <p>"Is this too hot?" "What does 'fold in' mean?" "Can I use milk instead of cream?" Real answers in context, not a Google rabbit hole.</p>
+        </div>
+        <div class="miso-feature">
+          <div class="miso-feature-img">
+            <img src="assets/mascot/miso-celebrating.png" alt="Miso celebrating">
+          </div>
+          <strong>Generate recipes</strong>
+          <p>Describe what you're craving. Miso builds the full recipe from scratch — ingredients, steps, timers, tips, all of it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PROGRESSION ====== -->
+  <section class="progression">
+    <div class="section-inner">
+      <h2>It's the same trick Duolingo<br>uses on you, but for cooking.</h2>
+      <p class="section-desc">Five skill trees. XP for every meal. A streak counter that guilts you just enough.</p>
+      <div class="progression-grid">
+        <div class="skill-path" style="--path-color: #1CB0F6;">
+          <div class="skill-color"></div>
+          <div>
+            <strong>Pasta Night</strong>
+            <span>Aglio e Olio through Chicken Parm</span>
+          </div>
+          <div class="skill-difficulty">5 recipes</div>
+        </div>
+        <div class="skill-path" style="--path-color: #FF4B4B;">
+          <div class="skill-color"></div>
+          <div>
+            <strong>Sear & Sizzle</strong>
+            <span>Pan-seared salmon to chimichurri steak</span>
+          </div>
+          <div class="skill-difficulty">5 recipes</div>
+        </div>
+        <div class="skill-path" style="--path-color: #FF9600;">
+          <div class="skill-color"></div>
+          <div>
+            <strong>Wok Skills</strong>
+            <span>Fried rice through dan dan noodles</span>
+          </div>
+          <div class="skill-difficulty">5 recipes</div>
+        </div>
+        <div class="skill-path" style="--path-color: #CE82FF;">
+          <div class="skill-color"></div>
+          <div>
+            <strong>Spice & Simmer</strong>
+            <span>Shakshuka to beef bourguignon</span>
+          </div>
+          <div class="skill-difficulty">5 recipes</div>
+        </div>
+        <div class="skill-path" style="--path-color: #58CC02;">
+          <div class="skill-color"></div>
+          <div>
+            <strong>Global Favorites</strong>
+            <span>Fish tacos, bibimbap, dumplings, and more</span>
+          </div>
+          <div class="skill-difficulty">5 recipes</div>
+        </div>
+      </div>
+      <div class="rank-track">
+        <span class="rank">Kitchen Newbie</span>
+        <span class="rank-arrow"></span>
+        <span class="rank">Home Cook</span>
+        <span class="rank-arrow"></span>
+        <span class="rank">Line Cook</span>
+        <span class="rank-arrow"></span>
+        <span class="rank">Sous Chef</span>
+        <span class="rank-arrow"></span>
+        <span class="rank">Head Chef</span>
+        <span class="rank-arrow"></span>
+        <span class="rank active">Master Chef</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PRICING ====== -->
+  <section class="pricing">
+    <div class="section-inner">
+      <h2>Pricing</h2>
+      <p class="section-desc">Try it free for a week. If you cook something good, keep going.</p>
+      <div class="pricing-cards">
+        <div class="price-card">
+          <h3>Weekly</h3>
+          <div class="price">$2.99<span>/week</span></div>
+          <p>Full access, cancel anytime.</p>
+        </div>
+        <div class="price-card featured">
+          <h3>Monthly</h3>
+          <div class="price">$7.99<span>/month</span></div>
+          <p>Same thing, but cheaper if you stick with it.</p>
+        </div>
+      </div>
+      <p class="pricing-note">7-day free trial on both. You won't be charged until the trial ends.</p>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER / CTA ====== -->
+  <footer class="footer">
+    <div class="section-inner footer-inner">
+      <div class="footer-cta">
+        <img src="assets/mascot/miso-celebrating.png" alt="Miso celebrating" class="footer-miso">
+        <h2>Go make dinner.</h2>
+        <a href="#" class="cta-button">Download for iOS</a>
+      </div>
+      <div class="footer-bottom">
+        <span>My Kitchen Pal</span>
+        <span class="footer-sep">&middot;</span>
+        <span>Made with real ingredients</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

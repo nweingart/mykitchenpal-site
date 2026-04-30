@@ -353,8 +353,9 @@
       banner.querySelector('.belt-banner-title').textContent = belt.name;
       banner.querySelector('.belt-banner-tagline').textContent = belt.tagline;
 
+      const amplitude = window.innerWidth < 480 ? 32 : window.innerWidth < 720 ? 44 : 56;
       path.innerHTML = recipes.map((r, i) => {
-        const xOffset = Math.sin((i * Math.PI) / 4) * 56;
+        const xOffset = Math.sin((i * Math.PI) / 4) * amplitude;
         const isFinal = i === recipes.length - 1;
         const trophy = isFinal ? `<div class="belt-node-trophy">${TROPHY_SVG}</div>` : '';
         return `<div class="belt-node" style="transform: translateX(${xOffset.toFixed(2)}px)">
@@ -375,6 +376,12 @@
     document.querySelector('.belt-arrow.next').addEventListener('click', () => {
       currentBeltIndex = (currentBeltIndex + 1) % BELTS.length;
       renderBelt(currentBeltIndex);
+    });
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => renderBelt(currentBeltIndex), 200);
     });
 
     renderBelt(0);

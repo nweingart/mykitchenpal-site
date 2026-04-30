@@ -852,21 +852,16 @@ p {
 
 @media (max-width: 900px) {
   .phones-row {
-    overflow-x: auto;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
     padding: 24px 24px 0;
     gap: 14px;
-    scrollbar-width: none;
-  }
-  .phones-row::-webkit-scrollbar {
-    display: none;
   }
   .phone {
-    width: 160px;
+    width: calc(50% - 7px);
+    max-width: 200px;
   }
-}
-
-@media (max-width: 900px) {
   .belt-banner-title {
     font-size: 1.2rem;
   }
@@ -876,40 +871,83 @@ p {
 }
 
 @media (max-width: 720px) {
+  html {
+    font-size: 16px;
+  }
+  .nav-inner {
+    padding: 0 16px;
+    gap: 16px;
+  }
   .nav-links {
     display: none;
   }
+  .nav-cta {
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
   .hero {
-    padding-top: 48px;
+    padding: 36px 16px 0;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 9vw, 3.4rem);
+    margin-bottom: 28px;
+  }
+  .app-store-badge {
+    margin-bottom: 12px;
+  }
+  .hero-trial {
+    margin-bottom: 40px;
   }
   .recipes {
-    padding: 64px 0 64px;
+    padding: 56px 0;
+  }
+  .recipes .section-inner {
+    padding: 0 20px;
   }
   .recipe-card {
-    width: 160px;
+    width: 140px;
   }
   .belts {
-    padding: 64px 0;
+    padding: 56px 0;
+  }
+  .belts .section-inner {
+    padding: 0 16px;
+  }
+  .belt-nav {
+    gap: 8px;
+    margin-bottom: 24px;
   }
   .belt-arrow {
     width: 44px;
   }
   .belt-banner {
     padding: 12px 16px;
+    min-height: 76px;
   }
   .belt-banner-title {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+  }
+  .belt-banner-tagline {
+    font-size: 0.78rem;
   }
   .belt-node-bubble {
-    width: 72px;
-    height: 72px;
+    width: 70px;
+    height: 70px;
+  }
+  .belt-node-label {
+    font-size: 0.78rem;
+    max-width: 120px;
   }
   .walkthrough {
-    padding: 64px 0;
+    padding: 56px 0;
+  }
+  .walkthrough .section-inner {
+    padding: 0 20px;
   }
   .recipe-header {
     flex-direction: column;
     text-align: center;
+    padding: 14px;
   }
   .recipe-header-image {
     width: 100%;
@@ -917,27 +955,80 @@ p {
   }
   .recipe-header-meta {
     justify-content: center;
+    gap: 6px;
+    font-size: 0.7rem;
   }
   .cook-step {
-    gap: 16px;
+    gap: 14px;
+    padding-bottom: 28px;
   }
   .cook-step-num {
-    width: 40px;
-    height: 40px;
-    font-size: 0.85rem;
+    width: 38px;
+    height: 38px;
+    font-size: 0.82rem;
   }
   .cook-step::before {
-    left: 19px;
-    top: 42px;
+    left: 18px;
+    top: 40px;
+  }
+  .cook-step-head h4 {
+    font-size: 1rem;
+  }
+  .cook-step-desc {
+    font-size: 0.92rem;
+  }
+  .cook-step-tip {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+  .cook-step-tip-miso {
+    width: 32px;
+    height: 32px;
+  }
+  .cook-step-tip strong {
+    font-size: 0.88rem;
+  }
+  .cook-step-tip p {
+    font-size: 0.82rem;
   }
   .final-cta {
-    padding: 64px 0;
+    padding: 48px 16px;
   }
   .final-cta h2 {
-    font-size: 2rem;
+    font-size: 1.85rem;
+    margin-bottom: 18px;
   }
   .footer-inner {
     flex-direction: column;
     text-align: center;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .phone {
+    width: calc(50% - 7px);
+  }
+  .belt-arrow {
+    width: 40px;
+  }
+  .belt-banner {
+    padding: 10px 14px;
+  }
+  .belt-banner-title {
+    font-size: 0.98rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recipe-marquee-1,
+  .recipe-marquee-2 {
+    animation: none;
+  }
+  .belt-node {
+    transition: none;
   }
 }

@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Kitchen Pal — Learn to cook, for real this time</title>
+  <title>My Kitchen Pal — Stop ordering DoorDash. Learn to cook.</title>
   <meta name="description" content="A cooking app that actually teaches you to cook. Step-by-step, with timers, tips, and a mouse named Miso.">
+  <link rel="icon" type="image/png" href="assets/mascot/miso-default.png">
+  <link rel="apple-touch-icon" href="assets/mascot/miso-default.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
@@ -12,107 +14,50 @@
 </head>
 <body>
 
+  <!-- ====== NAV ====== -->
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="assets/mascot/miso-default.png" alt="" class="nav-logo-mark">
+        <span class="nav-logo-text">My Kitchen Pal</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#menu">Recipes</a>
+        <a href="#miso">Miso</a>
+      </nav>
+      <a href="#" class="nav-cta">Download</a>
+    </div>
+  </header>
+
   <!-- ====== HERO ====== -->
   <section class="hero">
-    <div class="hero-food-grid" aria-hidden="true">
-      <div class="food-col food-col-1">
-        <img src="assets/recipes/pad-thai.jpg" alt="" loading="eager">
-        <img src="assets/recipes/shakshuka.jpg" alt="" loading="eager">
-        <img src="assets/recipes/dumplings.jpg" alt="" loading="eager">
-        <img src="assets/recipes/carbonara.jpg" alt="" loading="eager">
-        <img src="assets/recipes/pad-thai.jpg" alt="" loading="eager">
-        <img src="assets/recipes/shakshuka.jpg" alt="" loading="eager">
-      </div>
-      <div class="food-col food-col-2">
-        <img src="assets/recipes/butter-chicken.jpg" alt="" loading="eager">
-        <img src="assets/recipes/bibimbap.jpg" alt="" loading="eager">
-        <img src="assets/recipes/smash-burgers.jpg" alt="" loading="eager">
-        <img src="assets/recipes/thai-green-curry.jpg" alt="" loading="eager">
-        <img src="assets/recipes/butter-chicken.jpg" alt="" loading="eager">
-        <img src="assets/recipes/bibimbap.jpg" alt="" loading="eager">
-      </div>
-      <div class="food-col food-col-3">
-        <img src="assets/recipes/homemade-ramen.jpg" alt="" loading="eager">
-        <img src="assets/recipes/birria-tacos.jpg" alt="" loading="eager">
-        <img src="assets/recipes/pan-seared-salmon.jpg" alt="" loading="eager">
-        <img src="assets/recipes/aglio-e-olio.jpg" alt="" loading="eager">
-        <img src="assets/recipes/homemade-ramen.jpg" alt="" loading="eager">
-        <img src="assets/recipes/birria-tacos.jpg" alt="" loading="eager">
-      </div>
-      <div class="food-col food-col-4">
-        <img src="assets/recipes/chicken-fried-rice.jpg" alt="" loading="eager">
-        <img src="assets/recipes/fish-tacos.jpg" alt="" loading="eager">
-        <img src="assets/recipes/beef-bourguignon.jpg" alt="" loading="eager">
-        <img src="assets/recipes/korean-fried-chicken.jpg" alt="" loading="eager">
-        <img src="assets/recipes/chicken-fried-rice.jpg" alt="" loading="eager">
-        <img src="assets/recipes/fish-tacos.jpg" alt="" loading="eager">
-      </div>
-      <div class="food-col food-col-5">
-        <img src="assets/recipes/kung-pao-chicken.jpg" alt="" loading="eager">
-        <img src="assets/recipes/chimichurri-steak.jpg" alt="" loading="eager">
-        <img src="assets/recipes/thai-basil-chicken.jpg" alt="" loading="eager">
-        <img src="assets/recipes/chana-masala.jpg" alt="" loading="eager">
-        <img src="assets/recipes/kung-pao-chicken.jpg" alt="" loading="eager">
-        <img src="assets/recipes/chimichurri-steak.jpg" alt="" loading="eager">
-      </div>
-    </div>
-    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <img src="assets/mascot/miso-cooking.png" alt="Miso the mouse" class="hero-miso">
-      <h1>You keep saying<br>you'll learn to cook.</h1>
-      <div class="hero-divider"></div>
-      <p class="hero-sub">Miso will get you there.</p>
-      <p class="hero-desc">Meet your AI sous chef — a mouse who learned to cook from his grandma. He walks you through 50 real recipes step by step, answers your questions mid-cook, and won't let you burn anything.</p>
-      <a href="#" class="cta-button">Download for iOS</a>
+      <h1>Stop Ordering DoorDash.<br>Learn to Cook.</h1>
+      <a href="#" class="app-store-badge" aria-label="Download on the App Store">
+        <svg class="app-store-badge-apple" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+        </svg>
+        <span class="app-store-badge-text">
+          <span class="app-store-badge-small">Download on the</span>
+          <span class="app-store-badge-large">App Store</span>
+        </span>
+      </a>
+      <p class="hero-trial">Free for 7 days.</p>
+    </div>
+    <!-- Drop BrandBird-composited PNGs into assets/app/phone-1.png ... phone-5.png -->
+    <div class="phones-row">
+      <img class="phone" src="assets/app/phone-1.png" alt="">
+      <img class="phone" src="assets/app/phone-2.png" alt="">
+      <img class="phone" src="assets/app/phone-3.png" alt="">
+      <img class="phone" src="assets/app/phone-4.png" alt="">
     </div>
   </section>
 
-  <!-- ====== HOW IT WORKS ====== -->
-  <section class="how-it-works">
-    <div class="section-inner">
-      <h2>Here's what actually happens</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Pick something to cook</h3>
-            <p>50+ recipes organized by skill, not by how pretty they look on Instagram. Start with aglio e olio. Work up to dumplings from scratch.</p>
-          </div>
-          <img src="assets/recipes/aglio-e-olio.jpg" alt="Aglio e Olio" class="step-photo" loading="lazy">
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>We walk you through it</h3>
-            <p>Every step has a timer, a clear instruction, and a tip from someone who's burned this before. When two things need to happen at once, we split the screen so you don't forget the pasta water.</p>
-          </div>
-          <img src="assets/recipes/carbonara.jpg" alt="Carbonara in progress" class="step-photo" loading="lazy">
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Ask when you're lost</h3>
-            <p>"How do I know when the oil is hot enough?" Just ask. Miso answers with actual cooking knowledge, not a recipe blog life story.</p>
-          </div>
-          <img src="assets/mascot/miso-thinking.png" alt="Miso thinking" class="step-photo step-photo-miso" loading="lazy">
-        </div>
-        <div class="step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>You made food</h3>
-            <p>Take a photo. Get your XP. Do it again next week. Or tomorrow, if it was that good.</p>
-          </div>
-          <img src="assets/recipes/bibimbap.jpg" alt="Finished bibimbap" class="step-photo" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== RECIPE SHOWCASE ====== -->
-  <section class="recipes">
+  <!-- ====== RECIPE SHOWCASE (the menu) ====== -->
+  <section class="recipes" id="menu">
     <div class="section-inner">
       <h2>The menu</h2>
-      <p class="section-desc">50 recipes across five skill paths. These are things you'll actually want to eat.</p>
+      <p class="section-desc">120+ recipes across a 12-belt curriculum. These are things you'll actually want to eat.</p>
     </div>
     <div class="recipe-marquee-wrap">
       <div class="recipe-marquee recipe-marquee-1">
@@ -156,151 +101,337 @@
         <div class="recipe-card"><img src="assets/recipes/chana-masala.jpg" alt="" loading="lazy"><span>Chana Masala</span></div>
       </div>
     </div>
-    <p class="recipe-count">+ 34 more across Pasta Night, Sear &amp; Sizzle, Wok Skills, Spice &amp; Simmer, and Global Favorites.</p>
+    <p class="recipe-count">+ 100 more, from White Belt fundamentals to Obsidian Belt showpieces.</p>
   </section>
 
-  <!-- ====== MEET MISO — Big intro moment ====== -->
-  <section class="miso-intro">
+  <!-- ====== BELT PATH ====== -->
+  <section class="belts" id="belts">
     <div class="section-inner">
-      <div class="miso-intro-center">
-        <img src="assets/mascot/miso-default.png" alt="Miso the mouse" class="miso-intro-img">
-        <div class="miso-speech-bubble">
-          <p>Hey, I'm Miso. I learned to cook from my grandma and I've been waiting to teach you. Ask me anything — I actually know what I'm talking about.</p>
+      <h2>Level up like a martial art.</h2>
+      <p class="section-desc">Twelve belts. Browse the curriculum — each path is a real run of recipes designed to teach one skill set.</p>
+
+      <div class="belt-nav">
+        <button class="belt-arrow prev" aria-label="Previous belt" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="belt-banner" id="belt-banner">
+          <span class="belt-banner-eyebrow"></span>
+          <strong class="belt-banner-title"></strong>
+          <span class="belt-banner-tagline"></span>
         </div>
-        <h2>Meet your sous chef.</h2>
-        <p class="miso-intro-desc">Miso is an AI cooking companion powered by Claude. He's not a chatbot reading you a recipe blog. He understands what you're making, what step you're on, and what you actually need to know right now.</p>
+        <button class="belt-arrow next" aria-label="Next belt" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
       </div>
+
+      <div class="belt-path" id="belt-path"></div>
     </div>
   </section>
 
-  <!-- ====== MISO FEATURES ====== -->
-  <section class="miso-section">
+  <!-- ====== COOK ALONG WITH MISO ====== -->
+  <section class="walkthrough" id="miso">
     <div class="section-inner">
-      <div class="miso-features">
-        <div class="miso-feature">
-          <div class="miso-feature-img">
-            <img src="assets/mascot/miso-thinking.png" alt="Miso thinking">
+      <h2>Cook a real meal with Miso.</h2>
+      <p class="section-desc">Here's carbonara, step by step. Miso speaks up exactly when you need him to.</p>
+
+      <div class="recipe-header">
+        <img src="assets/recipes/carbonara.jpg" alt="Carbonara" class="recipe-header-image">
+        <div class="recipe-header-info">
+          <h3>Carbonara</h3>
+          <p>Classic Roman pasta with egg, pecorino, guanciale, and black pepper.</p>
+          <div class="recipe-header-meta">
+            <span>25 min</span><span class="meta-sep">·</span>
+            <span>Serves 2</span><span class="meta-sep">·</span>
+            <span>Medium</span><span class="meta-sep">·</span>
+            <span>+225 XP</span>
           </div>
-          <strong>Snap your fridge</strong>
-          <p>Take a photo of what you have. Miso identifies ingredients and tells you what you can make tonight — no grocery run required.</p>
-        </div>
-        <div class="miso-feature">
-          <div class="miso-feature-img">
-            <img src="assets/mascot/miso-cooking.png" alt="Miso cooking">
-          </div>
-          <strong>Ask mid-cook</strong>
-          <p>"Is this too hot?" "What does 'fold in' mean?" "Can I use milk instead of cream?" Real answers in context, not a Google rabbit hole.</p>
-        </div>
-        <div class="miso-feature">
-          <div class="miso-feature-img">
-            <img src="assets/mascot/miso-celebrating.png" alt="Miso celebrating">
-          </div>
-          <strong>Generate recipes</strong>
-          <p>Describe what you're craving. Miso builds the full recipe from scratch — ingredients, steps, timers, tips, all of it.</p>
         </div>
       </div>
+
+      <ol class="cook-steps">
+        <li class="cook-step">
+          <div class="cook-step-num">01</div>
+          <div class="cook-step-body">
+            <div class="cook-step-head">
+              <h4>Start boiling pasta water</h4>
+              <span class="cook-step-time cook">10:00</span>
+            </div>
+            <p class="cook-step-desc">Fill a large pot 3/4 full. Crank the burner to high. Cover with a lid until it's a rolling boil.</p>
+            <div class="cook-step-tip">
+              <img src="assets/mascot/miso-default.png" alt="" class="cook-step-tip-miso">
+              <div>
+                <span class="cook-step-tip-label">Miso says</span>
+                <strong>Use more water</strong>
+                <p>Pasta needs room to move around or it will stick together.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="cook-step">
+          <div class="cook-step-num">02</div>
+          <div class="cook-step-body">
+            <div class="cook-step-head">
+              <h4>Make egg and cheese mixture</h4>
+              <span class="cook-step-time prep">3:00</span>
+            </div>
+            <p class="cook-step-desc">Whisk 3 yolks and 1 whole egg with 3/4 cup grated pecorino and cracked pepper until thick and creamy.</p>
+            <div class="cook-step-tip">
+              <img src="assets/mascot/miso-default.png" alt="" class="cook-step-tip-miso">
+              <div>
+                <span class="cook-step-tip-label">Miso says</span>
+                <strong>Mix should be pancake-thick</strong>
+                <p>The mixture should be thick like pancake batter — this prevents the eggs from scrambling when added to hot pasta.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="cook-step">
+          <div class="cook-step-num">03</div>
+          <div class="cook-step-body">
+            <div class="cook-step-head">
+              <h4>Cook pasta until nearly done</h4>
+              <span class="cook-step-time cook">9:00</span>
+            </div>
+            <p class="cook-step-desc">Salt the water until it tastes like the sea. Add 200g spaghetti. Cook 1 minute less than the package says. Reserve 1 cup pasta water before draining.</p>
+            <div class="cook-step-tip">
+              <img src="assets/mascot/miso-default.png" alt="" class="cook-step-tip-miso">
+              <div>
+                <span class="cook-step-tip-label">Miso says</span>
+                <strong>Undercook your pasta</strong>
+                <p>It will finish cooking in the pan with the guanciale fat.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="cook-step">
+          <div class="cook-step-num">04</div>
+          <div class="cook-step-body">
+            <div class="cook-step-head">
+              <h4>Cook guanciale until crispy</h4>
+              <span class="cook-step-time cook">7:00</span>
+            </div>
+            <p class="cook-step-desc">Add guanciale strips to a cold non-stick pan. Bring up to medium heat. Render 6-7 minutes until golden and crispy.</p>
+            <div class="cook-step-tip">
+              <img src="assets/mascot/miso-default.png" alt="" class="cook-step-tip-miso">
+              <div>
+                <span class="cook-step-tip-label">Miso says</span>
+                <strong>Start in a cold pan</strong>
+                <p>Fat renders slowly without burning — no oil needed, guanciale has plenty of its own.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="cook-step">
+          <div class="cook-step-num">05</div>
+          <div class="cook-step-body">
+            <div class="cook-step-head">
+              <h4>Drain pasta and build the sauce</h4>
+              <span class="cook-step-time cook">2:00</span>
+            </div>
+            <p class="cook-step-desc">Toss drained pasta into the guanciale pan with heat OFF. Pour the egg mixture over. Toss vigorously for 1-2 minutes. Splash in pasta water if it thickens up too fast.</p>
+            <div class="cook-step-tip">
+              <img src="assets/mascot/miso-default.png" alt="" class="cook-step-tip-miso">
+              <div>
+                <span class="cook-step-tip-label">Miso says</span>
+                <strong>Residual heat is perfect</strong>
+                <p>The pasta and pan are hot enough to make a creamy sauce. Putting it back on the burner scrambles the eggs.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="cook-step">
+          <div class="cook-step-num">06</div>
+          <div class="cook-step-body">
+            <div class="cook-step-head">
+              <h4>Plate and serve immediately</h4>
+              <span class="cook-step-time plate">1:30</span>
+            </div>
+            <p class="cook-step-desc">Warm two bowls. Twirl pasta into portions. Top with the rest of the pecorino and more cracked pepper.</p>
+            <div class="cook-step-tip">
+              <img src="assets/mascot/miso-default.png" alt="" class="cook-step-tip-miso">
+              <div>
+                <span class="cook-step-tip-label">Miso says</span>
+                <strong>Carbonara waits for no one</strong>
+                <p>It thickens as it cools — serve and eat immediately for the best creamy texture.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <!-- ====== PROGRESSION ====== -->
-  <section class="progression">
+  <!-- ====== FINAL CTA ====== -->
+  <section class="final-cta">
     <div class="section-inner">
-      <h2>It's the same trick Duolingo<br>uses on you, but for cooking.</h2>
-      <p class="section-desc">Five skill trees. XP for every meal. A streak counter that guilts you just enough.</p>
-      <div class="progression-grid">
-        <div class="skill-path" style="--path-color: #1CB0F6;">
-          <div class="skill-color"></div>
-          <div>
-            <strong>Pasta Night</strong>
-            <span>Aglio e Olio through Chicken Parm</span>
-          </div>
-          <div class="skill-difficulty">5 recipes</div>
-        </div>
-        <div class="skill-path" style="--path-color: #FF4B4B;">
-          <div class="skill-color"></div>
-          <div>
-            <strong>Sear & Sizzle</strong>
-            <span>Pan-seared salmon to chimichurri steak</span>
-          </div>
-          <div class="skill-difficulty">5 recipes</div>
-        </div>
-        <div class="skill-path" style="--path-color: #FF9600;">
-          <div class="skill-color"></div>
-          <div>
-            <strong>Wok Skills</strong>
-            <span>Fried rice through dan dan noodles</span>
-          </div>
-          <div class="skill-difficulty">5 recipes</div>
-        </div>
-        <div class="skill-path" style="--path-color: #CE82FF;">
-          <div class="skill-color"></div>
-          <div>
-            <strong>Spice & Simmer</strong>
-            <span>Shakshuka to beef bourguignon</span>
-          </div>
-          <div class="skill-difficulty">5 recipes</div>
-        </div>
-        <div class="skill-path" style="--path-color: #58CC02;">
-          <div class="skill-color"></div>
-          <div>
-            <strong>Global Favorites</strong>
-            <span>Fish tacos, bibimbap, dumplings, and more</span>
-          </div>
-          <div class="skill-difficulty">5 recipes</div>
-        </div>
-      </div>
-      <div class="rank-track">
-        <span class="rank">Kitchen Newbie</span>
-        <span class="rank-arrow"></span>
-        <span class="rank">Home Cook</span>
-        <span class="rank-arrow"></span>
-        <span class="rank">Line Cook</span>
-        <span class="rank-arrow"></span>
-        <span class="rank">Sous Chef</span>
-        <span class="rank-arrow"></span>
-        <span class="rank">Head Chef</span>
-        <span class="rank-arrow"></span>
-        <span class="rank active">Master Chef</span>
-      </div>
+      <img src="assets/mascot/miso-cooking.png" alt="" class="final-cta-miso">
+      <h2>Go make dinner.</h2>
+      <a href="#" class="app-store-badge" aria-label="Download on the App Store">
+        <svg class="app-store-badge-apple" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+        </svg>
+        <span class="app-store-badge-text">
+          <span class="app-store-badge-small">Download on the</span>
+          <span class="app-store-badge-large">App Store</span>
+        </span>
+      </a>
+      <p class="hero-trial">Free for 7 days.</p>
     </div>
   </section>
 
-  <!-- ====== PRICING ====== -->
-  <section class="pricing">
-    <div class="section-inner">
-      <h2>Pricing</h2>
-      <p class="section-desc">Try it free for a week. If you cook something good, keep going.</p>
-      <div class="pricing-cards">
-        <div class="price-card">
-          <h3>Weekly</h3>
-          <div class="price">$2.99<span>/week</span></div>
-          <p>Full access, cancel anytime.</p>
-        </div>
-        <div class="price-card featured">
-          <h3>Monthly</h3>
-          <div class="price">$7.99<span>/month</span></div>
-          <p>Same thing, but cheaper if you stick with it.</p>
-        </div>
-      </div>
-      <p class="pricing-note">7-day free trial on both. You won't be charged until the trial ends.</p>
-    </div>
-  </section>
-
-  <!-- ====== FOOTER / CTA ====== -->
+  <!-- ====== FOOTER ====== -->
   <footer class="footer">
     <div class="section-inner footer-inner">
-      <div class="footer-cta">
-        <img src="assets/mascot/miso-celebrating.png" alt="Miso celebrating" class="footer-miso">
-        <h2>Go make dinner.</h2>
-        <a href="#" class="cta-button">Download for iOS</a>
+      <div class="footer-brand">
+        <img src="assets/mascot/miso-default.png" alt="" class="footer-logo">
+        <span class="footer-wordmark">My Kitchen Pal</span>
       </div>
-      <div class="footer-bottom">
-        <span>My Kitchen Pal</span>
-        <span class="footer-sep">&middot;</span>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <span class="footer-sep">·</span>
         <span>Made with real ingredients</span>
+        <span class="footer-sep">·</span>
+        <span>&copy; 2026</span>
       </div>
     </div>
   </footer>
+
+  <script>
+    // ===== Belt path browser =====
+    const BELTS = [
+      { id: 'white', name: 'White Belt', tagline: 'Kitchen Fundamentals', color: '#F5F5F5', textColor: '#1c1c1e', ring: '#58CC02', order: 0 },
+      { id: 'yellow', name: 'Yellow Belt', tagline: 'Breakfast & Lunch Basics', color: '#FFD700', textColor: '#1c1c1e', ring: '#FFD700', order: 1 },
+      { id: 'orange', name: 'Orange Belt', tagline: 'Weeknight Flavor Builders', color: '#FF9600', textColor: '#fff', ring: '#FF9600', order: 2 },
+      { id: 'green', name: 'Green Belt', tagline: 'Parallel Timing & Assembly', color: '#58CC02', textColor: '#fff', ring: '#58CC02', order: 3 },
+      { id: 'blue', name: 'Blue Belt', tagline: 'Multi-Component Weeknight Dinners', color: '#1CB0F6', textColor: '#fff', ring: '#1CB0F6', order: 4 },
+      { id: 'purple', name: 'Purple Belt', tagline: 'Global Flavor Passport', color: '#CE82FF', textColor: '#fff', ring: '#CE82FF', order: 5 },
+      { id: 'brown', name: 'Brown Belt', tagline: 'Precision Heat & Emulsions', color: '#8B4513', textColor: '#fff', ring: '#8B4513', order: 6 },
+      { id: 'red', name: 'Red Belt', tagline: 'Layered Spice and Depth', color: '#DC2626', textColor: '#fff', ring: '#DC2626', order: 7 },
+      { id: 'black', name: 'Black Belt', tagline: 'Sear, Rest, Slice', color: '#1A1A1A', textColor: '#fff', ring: '#1A1A1A', order: 8 },
+      { id: 'coral', name: 'Coral Belt', tagline: 'Sear, Sauce, Reduce', color: '#FF4D4D', textColor: '#fff', ring: '#FF4D4D', order: 9 },
+      { id: 'red-white', name: 'Red/White Belt', tagline: 'Composed Plates & Multi-Component Cooking', color: '#E11D48', textColor: '#fff', ring: '#E11D48', order: 10 },
+      { id: 'obsidian', name: 'Obsidian Belt', tagline: 'Chef-Tier Showpieces', color: '#0C0C0C', textColor: '#fff', ring: '#0C0C0C', order: 11 },
+    ];
+
+    const BELT_RECIPES = {
+      "white": [{"slug":"avocado-toast","title":"Avocado Toast"},{"slug":"mac-and-cheese","title":"Stovetop Mac & Cheese"},{"slug":"pesto-pasta","title":"Pesto Pasta"}],
+      "yellow": [{"slug":"blt","title":"BLT"},{"slug":"chicken-quesadilla","title":"Chicken Quesadilla"},{"slug":"classic-fluffy-pancakes","title":"Classic Fluffy Pancakes"},{"slug":"greek-salad","title":"Greek Salad"}],
+      "orange": [{"slug":"chicken-fajitas","title":"Chicken Fajitas"},{"slug":"classic-cheeseburger","title":"Classic Cheeseburger"},{"slug":"crispy-baked-chicken-wings","title":"Crispy Baked Chicken Wings"},{"slug":"shrimp-tacos","title":"Spicy Shrimp Tacos"},{"slug":"teriyaki-bowl","title":"Chicken Teriyaki Bowl"}],
+      "green": [{"slug":"classic-vinaigrette-salad","title":"Classic Vinaigrette Salad"},{"slug":"garlic-butter-shrimp","title":"Garlic Butter Shrimp"},{"slug":"grilled-cheese-tomato-soup","title":"Grilled Cheese & Tomato Soup"},{"slug":"honey-garlic-salmon","title":"Honey Garlic Salmon"},{"slug":"loaded-nachos","title":"Loaded Nachos"},{"slug":"thai-peanut-noodles","title":"Thai Peanut Noodles"}],
+      "blue": [{"slug":"beef-broccoli-stir-fry","title":"Beef and Broccoli Stir-Fry"},{"slug":"chicken-tortilla-soup","title":"Chicken Tortilla Soup"},{"slug":"fish-tacos","title":"Fish Tacos"},{"slug":"garlic-butter-pork-chops","title":"Garlic Butter Pork Chops"},{"slug":"honey-soy-glazed-salmon","title":"Honey Soy Glazed Salmon"},{"slug":"poke-bowl","title":"Ahi Tuna Poke Bowl"},{"slug":"shrimp-scampi","title":"Shrimp Scampi"}],
+      "purple": [{"slug":"chicken-alfredo","title":"Chicken Alfredo"},{"slug":"chicken-enchiladas","title":"Chicken Enchiladas"},{"slug":"greek-chicken","title":"Greek Lemon Chicken"},{"slug":"mediterranean-tilapia","title":"Mediterranean Tilapia"},{"slug":"orange-chicken","title":"Orange Chicken"},{"slug":"sesame-crusted-cod","title":"Sesame Crusted Cod"},{"slug":"sheet-pan-chicken","title":"Sheet Pan Chicken & Veggies"},{"slug":"sheet-pan-chicken-fajitas","title":"Sheet Pan Chicken Fajitas"}],
+      "brown": [{"slug":"coconut-curry-shrimp","title":"Coconut Curry Shrimp"},{"slug":"kimchi-fried-rice","title":"Kimchi Fried Rice"},{"slug":"lemon-dill-salmon","title":"Lemon Dill Salmon"},{"slug":"lemon-feta-pasta","title":"Lemon Feta Pasta"},{"slug":"mango-sticky-rice","title":"Mango Sticky Rice"},{"slug":"pan-seared-salmon","title":"Pan-Seared Salmon"},{"slug":"spanish-garlic-shrimp","title":"Spanish Garlic Shrimp"},{"slug":"thai-basil-beef","title":"Thai Basil Beef"},{"slug":"thai-basil-fried-rice","title":"Thai Basil Fried Rice"}],
+      "red": [{"slug":"buddha-bowl","title":"Buddha Bowl"},{"slug":"chicken-tikka-skewers","title":"Chicken Tikka Skewers"},{"slug":"herb-crusted-chicken-breast","title":"Herb-Crusted Chicken Breast"},{"slug":"pad-thai","title":"Pad Thai"},{"slug":"pan-seared-steak","title":"Pan-Seared Steak"},{"slug":"pho","title":"Pho"},{"slug":"shawarma-bowl","title":"Chicken Shawarma Bowl"},{"slug":"shrimp-and-grits","title":"Shrimp and Grits"},{"slug":"teriyaki-salmon","title":"Teriyaki Salmon"},{"slug":"tuna-poke-tacos","title":"Tuna Poke Tacos"},{"slug":"tuscan-chicken-skillet","title":"Tuscan Chicken Skillet"}],
+      "black": [{"slug":"aglio-e-olio","title":"Spaghetti Aglio e Olio"},{"slug":"bacon-wrapped-chicken-breast","title":"Bacon-Wrapped Chicken Breast"},{"slug":"bulgogi","title":"Korean Bulgogi"},{"slug":"cacio-e-pepe","title":"Cacio e Pepe"},{"slug":"chana-masala","title":"Chana Masala"},{"slug":"chicken-parm","title":"Chicken Parmigiana"},{"slug":"chicken-souvlaki","title":"Chicken Souvlaki"},{"slug":"chimichurri-shrimp","title":"Chimichurri Shrimp"},{"slug":"lamb-kofta","title":"Lamb Kofta"},{"slug":"scallion-oil-noodles","title":"Scallion Oil Noodles"},{"slug":"seared-tuna-steaks","title":"Seared Tuna Steaks"},{"slug":"teriyaki-glazed-chicken-thighs","title":"Teriyaki-Glazed Chicken Thighs"},{"slug":"udon-soft-egg","title":"Udon with Soft Egg"}],
+      "coral": [{"slug":"balsamic-glazed-chicken","title":"Balsamic-Glazed Chicken"},{"slug":"blackened-chicken","title":"Blackened Chicken"},{"slug":"cajun-blackened-shrimp","title":"Cajun Blackened Shrimp"},{"slug":"carbonara","title":"Carbonara"},{"slug":"chimichurri-steak","title":"Chimichurri Steak"},{"slug":"coconut-curry-salmon","title":"Coconut Curry Salmon"},{"slug":"coffee-rubbed-ribeye","title":"Coffee-Rubbed Ribeye"},{"slug":"korean-beef-bulgogi-bowls","title":"Korean Beef Bulgogi Bowls"},{"slug":"kung-pao-chicken","title":"Kung Pao Chicken"},{"slug":"lemon-herb-lamb-chops","title":"Lemon Herb Lamb Chops"},{"slug":"miso-glazed-salmon","title":"Miso-Glazed Salmon"},{"slug":"mushroom-risotto","title":"Mushroom Risotto"},{"slug":"pan-sauce-chicken","title":"Chicken with Pan Sauce"},{"slug":"ribeye-with-blue-cheese","title":"Ribeye with Blue Cheese"},{"slug":"turkey-bolognese","title":"Turkey Bolognese"}],
+      "red-white": [{"slug":"beef-sirloin-mushrooms","title":"Beef Sirloin with Mushrooms"},{"slug":"blackened-red-snapper","title":"Blackened Red Snapper"},{"slug":"chicken-katsu-sandwich","title":"Chicken Katsu Sandwich"},{"slug":"cumin-crusted-tuna","title":"Cumin-Crusted Tuna"},{"slug":"dal-tadka","title":"Dal Tadka"},{"slug":"dan-dan-noodles","title":"Dan Dan Noodles"},{"slug":"herb-crusted-pork-chops","title":"Herb-Crusted Pork Chops"},{"slug":"homemade-ramen","title":"Homemade Ramen"},{"slug":"jeera-rice-raita","title":"Jeera Rice with Raita"},{"slug":"jerk-chicken","title":"Jerk Chicken"},{"slug":"korean-bulgogi-steak","title":"Korean Bulgogi Steak"},{"slug":"korean-fried-chicken","title":"Korean Fried Chicken"},{"slug":"maple-glazed-pork-tenderloin","title":"Maple Glazed Pork Tenderloin"},{"slug":"mapo-tofu","title":"Mapo Tofu"},{"slug":"nashville-hot-chicken","title":"Nashville Hot Chicken"},{"slug":"oyakodon","title":"Oyakodon"},{"slug":"pecan-crusted-chicken","title":"Pecan-Crusted Chicken"},{"slug":"shakshuka","title":"Shakshuka"}],
+      "obsidian": [{"slug":"banh-mi","title":"Banh Mi"},{"slug":"chimichurri-lamb-steaks","title":"Chimichurri Lamb Steaks"},{"slug":"duck-breast","title":"Pan-Seared Duck Breast"},{"slug":"dumplings","title":"Pork & Chive Dumplings"},{"slug":"falafel","title":"Crispy Falafel"},{"slug":"french-omelette","title":"French Omelette"},{"slug":"fresh-pasta","title":"Fresh Egg Pasta"},{"slug":"gnocchi","title":"Potato Gnocchi"},{"slug":"greek-lamb-souvlaki","title":"Greek Lamb Souvlaki"},{"slug":"japanese-gyoza","title":"Japanese Gyoza"},{"slug":"lemongrass-chicken-bowl","title":"Lemongrass Chicken Bowl"},{"slug":"mediterranean-stuffed-chicken","title":"Mediterranean Stuffed Chicken"},{"slug":"moroccan-chicken-tagine","title":"Moroccan Chicken Tagine"},{"slug":"moroccan-spiced-lamb","title":"Moroccan Spiced Lamb"},{"slug":"ny-strip-chimichurri","title":"NY Strip with Chimichurri"},{"slug":"palak-paneer","title":"Palak Paneer"},{"slug":"salmon-risotto","title":"Salmon Risotto"},{"slug":"tonkatsu","title":"Tonkatsu"}],
+    };
+
+    const TROPHY_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v3c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-2.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 13.63 21 11.55 21 9V7c0-1.1-.9-2-2-2zM5 9V7h2v3.82C5.84 10.4 5 9.3 5 9zm14 0c0 .3-.84 1.4-2 1.82V7h2v2z"/></svg>';
+
+    let currentBeltIndex = 0;
+    const banner = document.getElementById('belt-banner');
+    const path = document.getElementById('belt-path');
+
+    function renderBelt(index) {
+      const belt = BELTS[index];
+      const recipes = BELT_RECIPES[belt.id] || [];
+
+      banner.style.setProperty('--belt', belt.color);
+      banner.style.setProperty('--belt-text', belt.textColor);
+      banner.querySelector('.belt-banner-eyebrow').textContent = `BELT ${belt.order + 1}`;
+      banner.querySelector('.belt-banner-title').textContent = belt.name;
+      banner.querySelector('.belt-banner-tagline').textContent = belt.tagline;
+
+      path.innerHTML = recipes.map((r, i) => {
+        const xOffset = Math.sin((i * Math.PI) / 4) * 56;
+        const isFinal = i === recipes.length - 1;
+        const trophy = isFinal ? `<div class="belt-node-trophy">${TROPHY_SVG}</div>` : '';
+        return `<div class="belt-node" style="transform: translateX(${xOffset.toFixed(2)}px)">
+          ${trophy}
+          <div class="belt-node-bubble" style="--ring: ${belt.ring}">
+            <img src="assets/recipes/${r.slug}.jpg" alt="${r.title}" loading="lazy">
+          </div>
+          <span class="belt-node-label">${r.title}</span>
+        </div>`;
+      }).join('');
+    }
+
+    document.querySelector('.belt-arrow.prev').addEventListener('click', () => {
+      currentBeltIndex = (currentBeltIndex - 1 + BELTS.length) % BELTS.length;
+      renderBelt(currentBeltIndex);
+    });
+
+    document.querySelector('.belt-arrow.next').addEventListener('click', () => {
+      currentBeltIndex = (currentBeltIndex + 1) % BELTS.length;
+      renderBelt(currentBeltIndex);
+    });
+
+    renderBelt(0);
+
+    // ===== Step timer pills =====
+    document.querySelectorAll('.cook-step-time').forEach((pill) => {
+      const original = pill.textContent.trim();
+      const [m0, s0] = original.split(':').map(Number);
+      const totalSeconds = m0 * 60 + s0;
+      let remaining = totalSeconds;
+      let intervalId = null;
+
+      pill.setAttribute('role', 'button');
+      pill.setAttribute('tabindex', '0');
+      pill.setAttribute('aria-label', `Start ${original} timer`);
+
+      const format = (s) => `${Math.floor(s / 60)}:${(s % 60).toString().padStart(2, '0')}`;
+
+      const showCheck = () => {
+        pill.classList.add('done');
+        pill.innerHTML = '<svg class="cook-step-check" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>';
+      };
+
+      const reset = () => {
+        if (intervalId) { clearInterval(intervalId); intervalId = null; }
+        remaining = totalSeconds;
+        pill.classList.remove('done');
+        pill.textContent = format(totalSeconds);
+      };
+
+      const start = () => {
+        intervalId = setInterval(() => {
+          remaining -= 1;
+          if (remaining <= 0) {
+            clearInterval(intervalId);
+            intervalId = null;
+            showCheck();
+            return;
+          }
+          pill.textContent = format(remaining);
+        }, 1000);
+      };
+
+      const pause = () => {
+        if (intervalId) { clearInterval(intervalId); intervalId = null; }
+      };
+
+      const toggle = () => {
+        if (pill.classList.contains('done')) { reset(); return; }
+        if (intervalId) { pause(); } else { start(); }
+      };
+
+      pill.addEventListener('click', toggle);
+      pill.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggle();
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

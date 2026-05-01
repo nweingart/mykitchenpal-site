@@ -386,6 +386,40 @@
 
     renderBelt(0);
 
+    // ===== Warm the cache for ALL belt recipe images =====
+    // Inject <link rel="prefetch"> for every recipe so subsequent belt
+    // switches read from cache instead of hitting the network.
+    (function warmBeltCache() {
+      const slugs = new Set();
+      // Prioritize neighbors of the starting belt (white) — yellow first
+      [1, BELTS.length - 1].forEach((i) => {
+        (BELT_RECIPES[BELTS[i].id] || []).forEach((r) => slugs.add(r.slug));
+      });
+      // Then everything else
+      Object.values(BELT_RECIPES).forEach((arr) => arr.forEach((r) => slugs.add(r.slug)));
+      const list = Array.from(slugs);
+
+      let i = 0;
+      function pump(deadline) {
+        while (i < list.length && (!deadline || deadline.timeRemaining() > 4)) {
+          const link = document.createElement('link');
+          link.rel = 'prefetch';
+          link.as = 'image';
+          link.href = `assets/recipes/${list[i]}.jpg`;
+          document.head.appendChild(link);
+          i++;
+        }
+        if (i < list.length) {
+          if ('requestIdleCallback' in window) requestIdleCallback(pump);
+          else setTimeout(pump, 80);
+        }
+      }
+      setTimeout(() => {
+        if ('requestIdleCallback' in window) requestIdleCallback(pump);
+        else setTimeout(pump, 80);
+      }, 1200);
+    })();
+
     // ===== Cook walkthrough mobile carousel progress =====
     const cookSteps = document.querySelector('.cook-steps');
     if (cookSteps) {

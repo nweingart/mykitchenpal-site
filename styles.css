@@ -752,6 +752,29 @@ p {
   color: var(--text-secondary);
 }
 
+/* Progress dots — only visible on mobile */
+.cook-progress {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.cook-progress-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: background 0.25s, width 0.25s, border-radius 0.25s;
+}
+
+.cook-progress-dot.active {
+  background: var(--text);
+  width: 26px;
+  border-radius: 4px;
+}
+
 /* ============================================
    FINAL CTA
    ============================================ */
@@ -958,38 +981,76 @@ p {
     gap: 6px;
     font-size: 0.7rem;
   }
-  .cook-step {
+  /* Horizontal snap-carousel of cook steps on mobile */
+  .cook-steps {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
     gap: 14px;
-    padding-bottom: 28px;
+    padding: 4px 22px 4px;
+    margin: 0 -20px;
+    scroll-padding-left: 22px;
+    max-width: none;
   }
-  .cook-step-num {
-    width: 38px;
-    height: 38px;
-    font-size: 0.82rem;
+  .cook-steps::-webkit-scrollbar {
+    display: none;
+  }
+  .cook-step {
+    flex: 0 0 calc(100vw - 80px);
+    max-width: 360px;
+    scroll-snap-align: center;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 22px 22px 24px;
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: 0 8px 22px rgba(20, 14, 4, 0.04);
   }
   .cook-step::before {
-    left: 18px;
-    top: 40px;
+    display: none;
+  }
+  .cook-step-num {
+    width: 44px;
+    height: 44px;
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+  }
+  .cook-step-body {
+    padding-top: 0;
+    flex: 1;
+  }
+  .cook-step-head {
+    margin-bottom: 10px;
   }
   .cook-step-head h4 {
-    font-size: 1rem;
+    font-size: 1.08rem;
   }
   .cook-step-desc {
     font-size: 0.92rem;
+    margin-bottom: 16px;
   }
   .cook-step-tip {
-    padding: 10px 12px;
+    padding: 12px 14px;
     gap: 10px;
   }
   .cook-step-tip-miso {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
   }
   .cook-step-tip strong {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
   }
   .cook-step-tip p {
-    font-size: 0.82rem;
+    font-size: 0.84rem;
+  }
+  .cook-progress {
+    display: flex;
   }
   .final-cta {
     padding: 48px 16px;

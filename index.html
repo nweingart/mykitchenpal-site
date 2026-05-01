@@ -386,6 +386,34 @@
 
     renderBelt(0);
 
+    // ===== Cook walkthrough mobile carousel progress =====
+    const cookSteps = document.querySelector('.cook-steps');
+    if (cookSteps) {
+      const stepEls = Array.from(cookSteps.querySelectorAll('.cook-step'));
+      const progress = document.createElement('div');
+      progress.className = 'cook-progress';
+      progress.setAttribute('aria-hidden', 'true');
+      stepEls.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.className = 'cook-progress-dot' + (i === 0 ? ' active' : '');
+        progress.appendChild(dot);
+      });
+      cookSteps.parentNode.insertBefore(progress, cookSteps.nextSibling);
+
+      const dots = Array.from(progress.querySelectorAll('.cook-progress-dot'));
+      cookSteps.addEventListener('scroll', () => {
+        const center = cookSteps.scrollLeft + cookSteps.offsetWidth / 2;
+        let activeIdx = 0;
+        let minDist = Infinity;
+        stepEls.forEach((step, i) => {
+          const stepCenter = step.offsetLeft + step.offsetWidth / 2;
+          const dist = Math.abs(center - stepCenter);
+          if (dist < minDist) { minDist = dist; activeIdx = i; }
+        });
+        dots.forEach((d, i) => d.classList.toggle('active', i === activeIdx));
+      }, { passive: true });
+    }
+
     // ===== Step timer pills =====
     document.querySelectorAll('.cook-step-time').forEach((pill) => {
       const original = pill.textContent.trim();
